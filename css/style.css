@@ -1,0 +1,28 @@
+/* ***********************************************************
+                     general
+************************************************************ */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header{
+    height: 70px;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+#sidebar{
+    height: 100%;
+    width: 150px;
+}
+
+#main-content{
+    width: calc(100% - 150px);
+    height: 100%;
+    overflow-y: auto;
+}
