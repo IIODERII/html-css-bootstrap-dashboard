@@ -3,17 +3,18 @@
 ************************************************************ */
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
 
 header{
-    height: 70px;
+    height: 60px;
     width: 100%;
 }
 
 main{
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 60px);
 }
 
 #sidebar{
@@ -28,7 +29,11 @@ main{
 }
 
 #main-content .top-bar{
-    height: 120px;
+    height: 90px;
+}
+
+.card-header h2{
+    font-weight: 500;
 }
 
 
@@ -74,6 +79,16 @@ header .search input{
     width: 60%;
     text-align: left;
 }
+
+#main-content table tr > td:nth-child(2) {
+    min-width: 95px;
+}
+
+/* *****************************
+             main faq
+******************************** */
+
+
 
 
 /* ******************************
