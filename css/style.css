@@ -84,6 +84,10 @@ header .search input{
     min-width: 95px;
 }
 
+#main-content table tr > td:last-child {
+    min-width: 85px;
+}
+
 /* *****************************
              main faq
 ******************************** */
