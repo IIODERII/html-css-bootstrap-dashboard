@@ -7,8 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Bool Dashboard</title>
 </head>
@@ -16,24 +19,194 @@
 <body>
 
     <div class="wrapper vh-100 w-100">
-        <header>
+        <header class="bg-light d-flex align-items-center">
+            <div class="container-fluid bg-white d-flex align-items-center justify-content-between h-75 w-100">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Logo" class="d-none d-lg-block">
+                    <img src="img/mobile-logo.png" alt="Logo piccolo" class="d-block d-lg-none w-100">
+                </div>
 
+                <div class="search">
+                    <div class="d-flex px-3">
+                        <label for="search" class="bg-secondary-subtle rounded-start-1 fs-6 p-2"><i
+                                class="fa-solid fa-magnifying-glass"></i></label>
+                        <input type="text" value="" name="search" id="search"
+                            class="bg-secondary-subtle border-0 rounded-end-1"
+                            placeholder="Prova a cercare: Lezioni di Laravel">
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <span class="d-none d-lg-inline"><a href="#" class="btn btn-outline-dark p-1 border-0"><i
+                                class="fa-solid fa-list-ul px-2"></a></i><a href="#"
+                            class="btn btn-outline-dark p-1 border-0"><i
+                                class="fa-solid fa-circle-question px-2"></i></a><a href="#"
+                            class="btn btn-outline-dark p-1 border-0"><i
+                                class="fa-solid fa-ellipsis-vertical px-2"></i></a></span>
+
+                    <div class="dropdown d-inline-block">
+                        <button class="dropdown-toggle border-0 bg-white fs-6" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-bell text-warning"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main class="d-flex">
-            <div id="sidebar">
+            <div id="sidebar" class="d-flex flex-column justify-content-between text-white p-3">
+                <ul class="list-unstyled">
+                    <li class="btn border-0 btn-outline-light d-block"><i class="fa-solid fa-house"></i> <span class="d-none d-lg-inline px-2">Home</span></li>
+                    <li class="btn border-0 btn-outline-light my-3 d-block"><i class="fa-solid fa-chart-simple"></i> <span
+                            class="d-none d-lg-inline px-2">Stats</span></li>
+                    <li class="btn border-0 btn-outline-light d-block"><i class="fa-solid fa-signal"></i> <span class="d-none d-lg-inline px-2">Signals</span></li>
+                </ul>
 
+                <div class="btn border-0 btn-outline-light"><i class="fa-solid fa-gear"></i> <span class="d-none d-lg-inline px-2">Admin</span></div>
             </div>
 
             <div id="main-content">
+                <div class="top-bar bg-primary">
 
+                </div>
+
+                <div class="main-main py-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-lg-8 px-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="fs-3">Prossime classi</h2>
+                                    </div>
+
+                                    <div class="px-3 py-3">
+                                        <table class="table table-hover text-center">
+                                            <thead>
+                                                <tr>
+                                                    <td class="text-secondary">Nome</th>
+                                                    <td class="text-secondary">Data inizio</th>
+                                                    <td class="text-secondary">ROI</th>
+                                                    <td class="text-secondary">Stato</th>
+                                                    <td class="text-secondary">Azioni</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 75</span></td>
+                                                    <td>15 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-success">Done</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 76</span></td>
+                                                    <td>16 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-success">Done</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 77</span></td>
+                                                    <td>17 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-warning text-white">process</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 78</span></td>
+                                                    <td>18 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-success">Done</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 79</span></td>
+                                                    <td>19 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-danger">failed</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 80</span></td>
+                                                    <td>20 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-success">Done</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 81</span></td>
+                                                    <td>21 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-danger">failed</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><img src="img/avatar-classe.png" alt="avatar classe" class="square"><span class="px-2">Classe 82</span></td>
+                                                    <td>22 Feb 2021</td>
+                                                    <td>20%</td>
+                                                    <td><span class="badge text-bg-success">Done</span></td>
+                                                    <td class="d-flex justify-content-evenly text-secondary">
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-pencil"></i></span>
+                                                        <span class="square btn border btn-outline-light d-flex justify-content-center align-items-center text-secondary"><i class="fa-solid fa-trash"></i></span>
+                                                    </td>
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-4">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

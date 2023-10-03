@@ -26,3 +26,74 @@ main{
     height: 100%;
     overflow-y: auto;
 }
+
+#main-content .top-bar{
+    height: 120px;
+}
+
+
+/* *****************************
+             header
+******************************** */
+
+header .buttons , header .logo{
+    width: 160px;
+}
+
+header .search{
+    width: calc(100% - 320px);
+}
+
+header .search input{
+    width: calc(100% - 1em);
+}
+
+/* *****************************
+             sidebar
+******************************** */
+
+#sidebar{
+    background-image: url("../img/sidebar-bg.png");
+    background-color: #051e34;
+}
+
+/* *****************************
+             main table
+******************************** */
+
+.square{
+    width: 2em;
+    height: 2em;
+}
+
+.square.btn{
+    border: 1px solid black!important;
+}
+
+#main-content table tr > td:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+
+/* ******************************
+            media query
+********************************* */
+
+@media screen and (max-width: 992px){
+    header .buttons , header .logo{
+        width: 40px;
+    }
+    
+    header .search{
+        width: calc(100% - 80px);
+    }
+
+    #sidebar{
+        width: 60px;
+    }
+    
+    #main-content{
+        width: calc(100% - 60px);
+    }
+}
