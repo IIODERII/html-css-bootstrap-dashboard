@@ -105,8 +105,8 @@ table .square.btn{
 /* ******************************
             media query
 ********************************* */
-@media screen and (min-width: 576px){
+@media screen and (min-width: 768px){
     .offcanvas{
-        width: 50%!important;
+        width: 42%!important;
     }
 }
