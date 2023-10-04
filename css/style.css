@@ -39,20 +39,16 @@ main{
              header
 ******************************** */
 
-/* header .buttons , header .logo{
-    width: 160px;
-}
-
-header .search{
-    width: calc(100% - 320px);
-} */
-
 header .search input{
     width: calc(100% - 1em);
 } 
 
 header .logo img:last-child{
     max-width: 40px;
+}
+
+header .buttons .dropdown-toggle::after{
+    display: none;
 }
 
 /* *****************************
@@ -82,6 +78,10 @@ header .logo img:last-child{
     text-align: left;
 }
 
+#main-content table tr > td:first-child img{
+    vertical-align: middle;
+}
+
 #main-content table tr > td:nth-child(2) {
     min-width: 95px;
 }
@@ -100,13 +100,3 @@ header .logo img:last-child{
 /* ******************************
             media query
 ********************************* */
-
-/* @media screen and (max-width: 992px){
-    header .buttons , header .logo{
-        width: 40px;
-    }
-    
-    header .search{
-        width: calc(100% - 80px);
-    }
-} */
