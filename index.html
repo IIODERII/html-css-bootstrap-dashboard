@@ -19,14 +19,14 @@
 <body class="bg-light">
 
     <div class="wrapper vh-100 w-100">
-        <header class="d-flex align-items-center">
-            <div class="container-fluid bg-white d-flex align-items-center justify-content-between h-75 w-100">
-                <div class="logo">
+        <header class="d-flex align-items-center container-fluid">
+            <div class="container-fluid bg-white row align-items-center justify-content-between h-75 w-100">
+                <div class="logo col-auto p-0">
                     <img src="img/logo.svg" alt="Logo" class="d-none d-lg-block">
                     <img src="img/mobile-logo.png" alt="Logo piccolo" class="d-block d-lg-none w-100">
                 </div>
 
-                <div class="search">
+                <div class="search col p-0">
                     <div class="d-flex px-3">
                         <label for="search" class="bg-secondary-subtle rounded-start-1 fs-6 p-2"><i
                                 class="fa-solid fa-magnifying-glass"></i></label>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
 
-                <div class="buttons">
+                <div class="buttons col-auto p-0">
                     <span class="d-none d-lg-inline"><a href="#" class="btn btn-outline-dark p-1 border-0"><i
                                 class="fa-solid fa-list-ul px-2"></a></i><a href="#"
                             class="btn btn-outline-dark p-1 border-0"><i
@@ -60,9 +60,9 @@
         </header>
 
         <main class="d-flex">
-            <div id="sidebar" class="d-flex flex-column justify-content-between text-white p-3">
+            <div id="sidebar" class="d-flex flex-column justify-content-between text-white p-3 flex-shrink-0">
                 <ul class="list-unstyled">
-                    <li class="btn border-0 btn-outline-light d-block text-start"><i class="fa-solid fa-house"></i> <span class="d-none d-lg-inline px-2">Home</span></li>
+                    <li class="btn border-0 btn-outline-light d-block text-start"><i class="fa-solid fa-house"></i><span class="d-none d-lg-inline px-2">Home</span></li>
                     <li class="btn border-0 btn-outline-light my-3 d-block text-start"><i class="fa-solid fa-chart-simple"></i> <span class="d-none d-lg-inline px-2">Stats</span></li>
                     <li class="btn border-0 btn-outline-light d-block text-start"><i class="fa-solid fa-signal"></i> <span class="d-none d-lg-inline px-2">Signals</span></li>
                 </ul>
@@ -70,7 +70,7 @@
                 <div class="btn border-0 btn-outline-light text-start"><i class="fa-solid fa-gear"></i> <span class="d-none d-lg-inline px-2">Admin</span></div>
             </div>
 
-            <div id="main-content">
+            <div id="main-content" class="flex-grow-1">
                 <div class="top-bar bg-primary">
 
                 </div>

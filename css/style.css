@@ -19,11 +19,9 @@ main{
 
 #sidebar{
     height: 100%;
-    width: 150px;
 }
 
 #main-content{
-    width: calc(100% - 150px);
     height: 100%;
     overflow-y: auto;
 }
@@ -41,16 +39,20 @@ main{
              header
 ******************************** */
 
-header .buttons , header .logo{
+/* header .buttons , header .logo{
     width: 160px;
 }
 
 header .search{
     width: calc(100% - 320px);
-}
+} */
 
 header .search input{
     width: calc(100% - 1em);
+} 
+
+header .logo img:last-child{
+    max-width: 40px;
 }
 
 /* *****************************
@@ -99,7 +101,7 @@ header .search input{
             media query
 ********************************* */
 
-@media screen and (max-width: 992px){
+/* @media screen and (max-width: 992px){
     header .buttons , header .logo{
         width: 40px;
     }
@@ -107,12 +109,4 @@ header .search input{
     header .search{
         width: calc(100% - 80px);
     }
-
-    #sidebar{
-        width: 60px;
-    }
-    
-    #main-content{
-        width: calc(100% - 60px);
-    }
-}
+} */
